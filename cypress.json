@@ -1,0 +1,44 @@
+{
+  "env": {
+    "BASE_URL": "{base url}",
+    "M2M_CLIENT_ID": "",
+    "M2M_CLIENT_SECRET": "--",
+    "WEBAPP_CLIENT_ID": "",
+    "WEBAPP_CLIENT_SECRET": "",
+    "PASSWORD": "",
+    "M2M_GRANT_TYPE": "",
+    "GRANT_TYPE": "",
+    "REDIRECT_URI": "",
+
+    "db": {
+      "user": "#{DB_USER}#",
+      "host": "#{DB_HOST}#",
+      "database": "#{DB_NAME}#",
+      "password": "#{DB_PASSWORD}#",
+      "port": 5432,
+      "ssl": {
+        "rejectUnauthorized": true
+      }
+    }
+  },
+  "ignoreTestFiles": [
+    "**/2-advanced-examples/*",
+    ""
+  ],
+  "viewportHeight": 768,
+  "viewportWidth": 1366,
+  "chromeWebSecurity": false,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  },
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "cypress/reports/mochareports/assets"
+}
